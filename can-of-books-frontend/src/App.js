@@ -1,12 +1,20 @@
-import './App.css';
-import './Reset.css'
+  <<<<<<< NICK
 
-function App() {
-  return (
-    <div className="App">
+  =======
+  >>>>>>> main
+  import './App.css';
+  import './Reset.css'
 
-    </div>
-  );
-}
+  function App() {
+    return (
+      <div className="App">
+  <<<<<<< NICK
 
-export default App;
+  =======
+
+  >>>>>>> main
+      </div>
+    );
+  }
+
+  export default App;
