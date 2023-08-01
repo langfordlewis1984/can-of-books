@@ -1,20 +1,13 @@
-  <<<<<<< NICK
 
-  =======
-  >>>>>>> main
-  import './App.css';
-  import './Reset.css'
+import './App.css';
+import './Reset.css'
 
-  function App() {
-    return (
-      <div className="App">
-  <<<<<<< NICK
+function App() {
+  return (
+    <div className="App">
 
-  =======
+    </div>
+  );
+}
 
-  >>>>>>> main
-      </div>
-    );
-  }
-
-  export default App;
+export default App;
