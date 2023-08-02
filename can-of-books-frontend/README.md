@@ -55,7 +55,9 @@ Pause time: 2.25pm
 
 Resume Time: 3.15pm
 
-Actual time needed to complete:
+End Time: 5.05pm
+
+Actual time needed to complete: 3hrs
 
 ## Credit and Collaborations
 
