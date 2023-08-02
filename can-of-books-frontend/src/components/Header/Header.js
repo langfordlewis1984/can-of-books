@@ -8,10 +8,10 @@ export default function Header() {
         <h1>Can of Books</h1>
         <nav>
             <ul>
-            <li>
+            <li className='home'>
                 <Link to={"/"}>Home</Link>
             </li>
-            <li>
+            <li className='about'>
                 <Link to={"/about"}>About</Link>
             </li>
             </ul>

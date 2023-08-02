@@ -1,3 +1,32 @@
 h1{
     font-size: 3rem;
+    color: rgb(156, 11, 11);
+    font-weight: 700;
+    text-align: center;
+    background-color: beige;
+}
+
+nav{
+    font-size: 1.3rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(223, 223, 177);
+}
+
+.about{
+    float: right;
+    padding: .5rem;
+    padding-right: 2rem;
+}
+
+.home{
+    float: left;
+    padding: .5rem;
+    padding-left: 2rem;
+
 }
