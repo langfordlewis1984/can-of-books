@@ -3,7 +3,7 @@ import "./BestBooks.css";
 import axios from "axios";
 import AddBookButton from "../AddBookButton/AddBookButton";
 
-export default function BestBooks() {
+export default function BestBooks({openModal, closeModal, modalContent}) {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function BestBooks() {
       let API = `http://localhost:8888/books`;
       const result = await axios.get(API);
       console.log(result.data);
-      // setBooks([])
+      setBooks([])
       setBooks(result.data);
     } catch (error) {
       console.log(error);
@@ -36,6 +36,7 @@ export default function BestBooks() {
   return (
     <div className="books">
       <h2>Books</h2>
+      <button>Add Book</button>
       <AddBookButton onSubmit={handleAddBook} />
       {books.length === 0 ? (
         <p>There are no books</p>

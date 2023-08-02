@@ -53,7 +53,7 @@ Start time: 1.15ish
 
 Pause time: 2.25pm
 
-Resume Time:
+Resume Time: 3.15pm
 
 Actual time needed to complete:
 

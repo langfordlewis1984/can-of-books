@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import "./About.css"
 
 export default function About() {
   return (
@@ -12,12 +13,12 @@ export default function About() {
         </Helmet>
         <main>
             <h2>About Page</h2>
-            <p>Here is the information about the creators of this website</p>
-            <h3>Nick Lewis</h3>
-            <h3>Jessica Bane</h3>
-            <p>
-                Link to GitHub: https://github.com/langfordlewis1984/can-of-book
-            </p>
+            <p className='discription'>Here is the information about the creators of this website</p>
+            <h3 className='developer'>Nick Lewis</h3>
+            <h3 className='developer'>Jessica Bane</h3>
+            <p className='moreInfo'>If you would like to look at the code please feel free at the GitHub link below</p>
+            <a className='github' href='https://github.com/langfordlewis1984/can-of-books'>GitHub</a>
+            
         </main>
     </>
   )
