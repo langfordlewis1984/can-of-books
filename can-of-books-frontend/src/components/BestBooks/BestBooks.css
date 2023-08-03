@@ -18,3 +18,15 @@
     font-size: 1.5rem;
     font-weight: 700;
 }
+
+.addButton{
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    color: #EAB2A0;
+    background-color: #2D4356;
+    display: flex;
+    margin: auto;
+    padding: 1rem;
+}
+

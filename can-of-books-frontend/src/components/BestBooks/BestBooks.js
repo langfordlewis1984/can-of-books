@@ -2,20 +2,24 @@ import React, { useEffect, useState } from "react";
 import "./BestBooks.css";
 import axios from "axios";
 import AddBookButton from "../AddBookButton/AddBookButton";
+import BooksCarousel from "../../components/BooksCarousel/BooksCarousel";
 
-export default function BestBooks({}) {
+
+export default function BestBooks() {
   const [books, setBooks] = useState([]);
   const [modal, setModal] = useState(false);
   const [modalContent, setModalContent] = useState({});
 
+
   useEffect(() => {
     getBooks();
+    
   }, []);
 
   function handleModal(form) {
     setModal(!modal);
     setModalContent(form);
-    // console.log(modal);
+    console.log(modalContent)
   }
 
   function closeModal() {
@@ -27,13 +31,13 @@ export default function BestBooks({}) {
     try {
       let API = `http://localhost:8888/books`;
       const result = await axios.get(API);
-      console.log(result.data);
       setBooks([]);
       setBooks(result.data);
     } catch (error) {
       console.log(error);
     }
   }
+
 
   const handleAddBook = async (newBook) => {
     try {
@@ -49,11 +53,13 @@ export default function BestBooks({}) {
   return (
     <div className="books">
       <h2>Books</h2>
-      <button onClick={handleModal}>Add Book</button>
+      <BooksCarousel books={books}/>
+
+      <button className="addButton" onClick={handleModal}>Add Book</button>
       {modal && (
         <AddBookButton onSubmit={handleAddBook} closeModal={closeModal} />
       )}
-      {/* <AddBookButton onSubmit={handleAddBook} /> */}
+{/* 
       {books.length === 0 ? (
         <p>There are no books</p>
       ) : (
@@ -68,7 +74,7 @@ export default function BestBooks({}) {
             </div>
           );
         })
-      )}
+      )} */}
     </div>
   );
 }

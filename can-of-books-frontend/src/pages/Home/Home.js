@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import BestBooks from "../../components/BestBooks/BestBooks";
+// import BooksCarousel from "../../components/BooksCarousel/BooksCarousel";
 import "./Home.css";
 
-export default function Home({}) {
+export default function Home() {
   return (
     <>
       <Helmet>
@@ -17,6 +18,7 @@ export default function Home({}) {
       <main>
         <h2>Home Page</h2>
         <BestBooks />
+        {/* <BooksCarousel/> */}
       </main>
     </>
   );

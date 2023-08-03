@@ -59,6 +59,17 @@ End Time: 5.05pm
 
 Actual time needed to complete: 3hrs
 
+3.  Name of feature: Book Carousel
+    Details: Able to scroll books
+
+Estimate of time needed to complete: 2Hour
+
+Start time: 10pm
+
+End time: 12.30am
+
+Actual time needed to complete: 2.5hrs
+
 ## Credit and Collaborations
 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
