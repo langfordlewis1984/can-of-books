@@ -38,4 +38,18 @@ app.get("/books", async (request, response) => {
   }
 });
 
+//DELETE
+app.delete("/books/:_id", async (request, response) => {
+  console.log("test " + request);
+  try {
+    const id = request.params._id;
+    console.log(id);
+    const deleteBook = await Book.findByIdAndDelete(id);
+    response.status(200).send(deleteBook);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json(error);
+  }
+});
+
 app.listen(PORT, () => console.log(`App is listening on port ${PORT}`));

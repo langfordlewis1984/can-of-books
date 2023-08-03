@@ -70,6 +70,17 @@ End time: 12.30am
 
 Actual time needed to complete: 2.5hrs
 
+4.  Name of feature: Delete Book
+    Details: user able to remove book from collection
+
+Estimate of time needed to complete: 2Hour
+
+Start time: 9.45am
+
+End time: 11am
+
+Actual time needed to complete: 1.15
+
 ## Credit and Collaborations
 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
