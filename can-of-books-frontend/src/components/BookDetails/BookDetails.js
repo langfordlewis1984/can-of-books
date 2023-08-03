@@ -28,6 +28,7 @@ export default function BookDetails({ handleUpdateBook, book, closeModal2 }) {
         <legend className="formLegend">Update Book</legend>
         <input
           required
+          id="title"
           name="title"
           placeholder="enter title of book"
           onChange={handleChange}
