@@ -81,6 +81,17 @@ End time: 11am
 
 Actual time needed to complete: 1.15
 
+5.  Name of feature: Update Book
+    Details: user able to update book info
+
+Estimate of time needed to complete: 2Hour
+
+Start time: 3pm
+
+End time: 17.30
+
+Actual time needed to complete: 2.5
+
 ## Credit and Collaborations
 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->

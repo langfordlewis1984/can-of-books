@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./AddBookButton.css";
+import "./BookDetails.css";
 
-export default function AddBookButton({ handleAddBook, book, closeModal }) {
+export default function BookDetails({ handleUpdateBook, book, closeModal2 }) {
   const [formData, setFormData] = useState(
     book ?? {
       title: "",
@@ -18,14 +18,14 @@ export default function AddBookButton({ handleAddBook, book, closeModal }) {
 
   const submit = (event) => {
     event.preventDefault();
-    handleAddBook(formData);
-    closeModal();
+    handleUpdateBook(formData);
+    closeModal2();
   };
 
   return (
     <div className="addBook">
       <form className="form" onSubmit={submit}>
-        <legend className="formLegend">Add New Book</legend>
+        <legend className="formLegend">Update Book</legend>
         <input
           required
           name="title"
@@ -46,9 +46,9 @@ export default function AddBookButton({ handleAddBook, book, closeModal }) {
           value={formData.status}
         ></input>
         <button className="submitButton" type="submit">
-          {book ? "Update" : "Submit Book"}
+          {book ? "Update" : "Edit Book"}
         </button>
-        <button className="closeModal" onClick={closeModal}>
+        <button className="closeModal" onClick={closeModal2}>
           X
         </button>
       </form>
