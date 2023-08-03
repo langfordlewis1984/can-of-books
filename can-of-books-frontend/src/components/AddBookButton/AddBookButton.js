@@ -12,7 +12,6 @@ export default function AddBookButton({ onSubmit, book, closeModal }) {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    // console.log(formData);
   };
 
   const submit = (event) => {
@@ -26,6 +25,7 @@ export default function AddBookButton({ onSubmit, book, closeModal }) {
       <form className="form" onSubmit={submit}>
         <legend className="formLegend">Add New Book</legend>
         <input
+          required
           name="title"
           placeholder="enter title of book"
           onChange={handleChange}
@@ -43,7 +43,12 @@ export default function AddBookButton({ onSubmit, book, closeModal }) {
           onChange={handleChange}
           value={formData.status}
         ></input>
-        <button className="submitButton" type="submit">{book ? "Update" : "Submit Book"}</button>
+        <button className="submitButton" type="submit">
+          {book ? "Update" : "Submit Book"}
+        </button>
+        <button className="closeModal" onClick={closeModal}>
+          X
+        </button>
       </form>
     </div>
   );
