@@ -1,0 +1,36 @@
+.addBook {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 50vw;
+  height: auto;
+  background-color: #435b66;
+  transform: translate(-50%, -50%);
+  border: solid 3px black;
+  padding: 2rem;
+  color: wheat;
+}
+.formLegend {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.form input {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem auto;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.submitButton {
+  width: auto;
+  height: auto;
+  font-size: 1.1rem;
+  color: #eab2a0;
+  background-color: #2d4356;
+  display: flex;
+  margin: auto;
+  padding: 0.5rem;
+}

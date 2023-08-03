@@ -24,6 +24,7 @@ export default function BestBooks() {
     setModalContent({});
   }
 
+  //READ
   async function getBooks() {
     try {
       let API = `http://localhost:8888/books`;
@@ -36,16 +37,19 @@ export default function BestBooks() {
     }
   }
 
+  //CREATE
   const handleAddBook = async (newBook) => {
     try {
       let API = `http://localhost:8888/books`;
       const result = await axios.post(API, newBook);
+      console.log("book being added");
       setBooks([...books, result.data]);
     } catch (error) {
       console.log(error);
     }
   };
 
+  //DELETE
   const deleteBook = async (id) => {
     const result = await axios.delete(`http://localhost:8888/books/${id}`);
     getBooks();
@@ -53,6 +57,13 @@ export default function BestBooks() {
 
   const handleButtonClick = () => {
     setDisabledButton(true);
+  };
+
+  //UPDATE
+  const handleUpdateBook = async (book) => {
+    await axios.put(`http://localhost:8888/books/${book._id}`, book);
+    console.log("book being updated");
+    getBooks();
   };
 
   return (
@@ -63,13 +74,17 @@ export default function BestBooks() {
         deleteBookButton={deleteBook}
         handleButtonClick={handleButtonClick}
         disabledButton={disabledButton}
+        handleModal={handleModal}
+        handleUpdateBook={handleUpdateBook}
+        modal={modal}
+        closeModal={closeModal}
       />
 
       <button className="addButton" onClick={handleModal}>
         Add Book
       </button>
       {modal && (
-        <AddBookButton onSubmit={handleAddBook} closeModal={closeModal} />
+        <AddBookButton handleAddBook={handleAddBook} closeModal={closeModal} />
       )}
     </div>
   );

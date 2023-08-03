@@ -52,4 +52,17 @@ app.delete("/books/:_id", async (request, response) => {
   }
 });
 
+//UPDATE
+app.put("/books/:_id", async (request, response) => {
+  try {
+    const updateBook = await Book.findByIdAndUpdate(
+      request.params._id,
+      request.body
+    );
+    response.status(200).send();
+  } catch (error) {
+    response.status(404).json(error);
+  }
+});
+
 app.listen(PORT, () => console.log(`App is listening on port ${PORT}`));

@@ -1,18 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BooksCarousel.css";
 import { useSnapCarousel } from "react-snap-carousel";
+import AddBookButton from "../AddBookButton/AddBookButton";
+import BookDetails from "../BookDetails/BookDetails";
 
 export default function BooksCarousel({
   books,
   deleteBookButton,
   handleButtonClick,
   disabledButton,
+  handleUpdateBook,
+  closeModal,
 }) {
+  const [modal2, setModal2] = useState(false);
+  const [modalContent2, setModalContent2] = useState({});
+
   const { scrollRef, pages, activePageIndex, next, prev, goTo } =
     useSnapCarousel();
 
-  function updateBook() {
+  function handleModal2(form) {
+    setModal2(!modal2);
+    setModalContent2(form);
+  }
+
+  function closeModal2() {
+    setModal2(!modal2);
+    setModalContent2({});
+  }
+
+  function updateBook(form) {
     console.log("Updating Book placeholder");
+    console.log(modal2);
+    handleModal2();
+    setModalContent2(form);
   }
 
   return (
@@ -34,6 +54,13 @@ export default function BooksCarousel({
               >
                 Delete
               </button>
+              {modal2 && (
+                <BookDetails
+                  handleUpdateBook={handleUpdateBook}
+                  book={book}
+                  closeModal2={closeModal2}
+                />
+              )}
             </div>
           </li>
         ))}
