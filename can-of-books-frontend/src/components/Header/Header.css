@@ -1,13 +1,16 @@
 h1{
     font-size: 3rem;
-    color: rgb(156, 11, 11);
+    color: #2D4356;
     font-weight: 700;
     text-align: center;
-    background-color: beige;
+    background-color: #EAB2A0    ;
+    padding: .5rem;
 }
 
 nav{
     font-size: 1.3rem;
+    background-color: burlywood;
+
 }
 
 ul {
@@ -15,7 +18,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(223, 223, 177);
+    background-color: burlywood;
 }
 
 .about{

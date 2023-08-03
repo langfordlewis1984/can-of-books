@@ -1,5 +1,16 @@
+/* Colours
+#2D4356
+#435B66
+#A76F6F
+#EAB2A0
+ */
+
 *{
  box-sizing: border-box;
  font-size: 10px;
-  }
+}
 
+h2{
+    text-align: center;
+    padding: .1rem 0;
+}

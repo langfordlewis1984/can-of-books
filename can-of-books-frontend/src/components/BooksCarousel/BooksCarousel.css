@@ -1,0 +1,39 @@
+.scrool{
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+}
+
+.bookLi{
+    background-color: blanchedalmond;
+    width: 400px;
+    height: 420px;
+    flex-shrink: 0;
+    margin: .5rem;
+}
+
+.pageNum, .prevButton, .nextButton{
+    background-color: #2D4356;
+    color: #EAB2A0;
+    font-size: .8rem;
+}
+
+.activePageNum{
+    font-size: 1rem;
+}
+.bookOptions{
+    display: flex;
+}
+.updateButton{
+    font-size: .8rem;
+    background-color: #2D4356;
+    color: wheat;
+    margin: auto;
+}
+
+.deleteButton{
+    font-size: .8rem;
+    background-color: tomato;
+    margin: auto;
+}
