@@ -92,6 +92,17 @@ End time: 17.30
 
 Actual time needed to complete: 2.5
 
+6.  Name of feature: AuthO
+    Details: user able to log in
+
+Estimate of time needed to complete: 30 mins
+
+Start time:
+
+End time:
+
+Actual time needed to complete:
+
 ## Credit and Collaborations
 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->

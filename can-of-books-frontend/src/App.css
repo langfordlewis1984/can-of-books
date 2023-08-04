@@ -5,12 +5,24 @@
 #EAB2A0
  */
 
-*{
- box-sizing: border-box;
- font-size: 10px;
+* {
+  box-sizing: border-box;
+  font-size: 10px;
 }
 
-h2{
-    text-align: center;
-    padding: .1rem 0;
+h2 {
+  text-align: center;
+  padding: 0.1rem 0;
+}
+
+.loginButton {
+  font-size: 0.8rem;
+  background-color: #2d4356;
+  color: wheat;
+  margin: 1rem;
+  padding: 3px;
+}
+
+.userProfile {
+  display: flex;
 }
