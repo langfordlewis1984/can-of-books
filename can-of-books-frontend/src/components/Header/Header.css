@@ -21,15 +21,35 @@ ul {
     background-color: burlywood;
 }
 
+.home{
+    float: left;
+    padding: .5rem;
+    padding-left: 2rem;
+
+}
+
+.userProfile {
+    float:left;
+    font-size: 1rem;
+    padding: .3rem;
+    padding-left: 3rem;
+}
+
 .about{
     float: right;
     padding: .5rem;
     padding-right: 2rem;
 }
 
-.home{
-    float: left;
-    padding: .5rem;
-    padding-left: 2rem;
+.logBut{
+    position: absolute;
+    right: 0;
+}
 
+.loginButton {
+    font-size: 0.8rem;
+    background-color: #2d4356;
+    color: wheat;
+    padding: 3px;
+    margin: .1rem;
 }

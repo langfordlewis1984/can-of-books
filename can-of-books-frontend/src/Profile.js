@@ -11,7 +11,7 @@ const Profile = () => {
   return (
     isAuthenticated && (
       <div className="userProfile">
-        <h2>Welcome, {user.name}</h2>
+        <h2 className="userProfile">Welcome, {user.name}</h2>
       </div>
     )
   );
