@@ -37,3 +37,9 @@
     background-color: tomato;
     margin: auto;
 }
+
+.bookDescription{
+    margin: 0 .5rem;
+    width: auto;
+    overflow: scroll;
+}

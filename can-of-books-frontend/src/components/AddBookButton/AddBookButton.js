@@ -13,7 +13,6 @@ export default function AddBookButton({ handleAddBook, book, closeModal }) {
   // Dealing with FORM DATA
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
   };
 
   const submit = (event) => {
@@ -23,35 +22,34 @@ export default function AddBookButton({ handleAddBook, book, closeModal }) {
   };
 
   return (
-    <div className="addBook">
-      <form className="form" onSubmit={submit}>
-        <legend className="formLegend">Add New Book</legend>
-        <input
-          required
-          name="title"
-          placeholder="enter title of book"
-          onChange={handleChange}
-          value={formData.title}
-        ></input>
-        <input
-          name="description"
-          placeholder="enter book description"
-          onChange={handleChange}
-          value={formData.description}
-        ></input>
-        <input
-          name="status"
-          placeholder="what is the status?"
-          onChange={handleChange}
-          value={formData.status}
-        ></input>
-        <button className="submitButton" type="submit">
-          {book ? "Update" : "Submit Book"}
-        </button>
-        <button className="closeModal" onClick={closeModal}>
-          X
-        </button>
-      </form>
+    <div className="modalBackground">
+      <div className="addBook">
+        <form className="form" onSubmit={submit}>
+          <legend className="formLegend">Add New Book</legend>
+          <input
+            required
+            name="title"
+            placeholder="enter title of book"
+            onChange={handleChange}
+            value={formData.title}
+          ></input>
+                    <textarea className="description" name="description" wrap="soft" placeholder="enter book description" onChange={handleChange} value={formData
+          .description
+          }></textarea>
+          <input
+            name="status"
+            placeholder="what is the status?"
+            onChange={handleChange}
+            value={formData.status}
+          ></input>
+          <button className="submitButton" type="submit">
+            {book ? "Update" : "Submit Book"}
+          </button>
+          <button className="closeModal" onClick={closeModal}>
+            X
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
