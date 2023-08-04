@@ -1,3 +1,13 @@
+.modalBackground{
+  background-color: #435b6695;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+}
+
 .addBook {
   position: fixed;
   top: 50%;
@@ -14,6 +24,7 @@
   font-size: 3rem;
   text-align: center;
   padding: 1rem;
+  width: auto;
 }
 
 .form input {
@@ -22,6 +33,13 @@
   margin: 1rem auto;
   font-size: 2rem;
   text-align: center;
+  width: 100%;
+}
+
+.description{
+  height: 30vh;
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 .submitButton {
@@ -33,4 +51,18 @@
   display: flex;
   margin: auto;
   padding: 0.5rem;
+}
+
+.closeModal{
+  background-color: #eab2a0;
+  color: #2d4356;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: #2D4356 3px solid;
+
 }

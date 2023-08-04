@@ -7,7 +7,6 @@ import BooksCarousel from "../../components/BooksCarousel/BooksCarousel";
 export default function BestBooks() {
   const [books, setBooks] = useState([]);
   const [modal, setModal] = useState(false);
-  const [modalContent, setModalContent] = useState({});
   const [disabledButton, setDisabledButton] = useState(false);
 
   useEffect(() => {
@@ -16,12 +15,10 @@ export default function BestBooks() {
 
   function handleModal(form) {
     setModal(!modal);
-    setModalContent(form);
   }
 
   function closeModal() {
     setModal(!modal);
-    setModalContent({});
   }
 
   //READ
@@ -42,7 +39,6 @@ export default function BestBooks() {
     try {
       let API = `http://localhost:8888/books`;
       const result = await axios.post(API, newBook);
-      console.log("book being added");
       setBooks([...books, result.data]);
     } catch (error) {
       console.log(error);
@@ -51,7 +47,7 @@ export default function BestBooks() {
 
   //DELETE
   const deleteBook = async (id) => {
-    const result = await axios.delete(`http://localhost:8888/books/${id}`);
+    await axios.delete(`http://localhost:8888/books/${id}`);
     getBooks();
   };
 
@@ -62,7 +58,6 @@ export default function BestBooks() {
   //UPDATE
   const handleUpdateBook = async (book) => {
     await axios.put(`http://localhost:8888/books/${book._id}`, book);
-    console.log("book being updated");
     getBooks();
   };
 

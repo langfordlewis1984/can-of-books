@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./BooksCarousel.css";
 import { useSnapCarousel } from "react-snap-carousel";
-import AddBookButton from "../AddBookButton/AddBookButton";
 import BookDetails from "../BookDetails/BookDetails";
 
 export default function BooksCarousel({
@@ -20,7 +19,6 @@ export default function BooksCarousel({
 
   function handleModal2(form) {
     setModal2(!modal2);
-    setModalContent2(form);
   }
 
   function closeModal2() {
@@ -28,11 +26,9 @@ export default function BooksCarousel({
     setModalContent2({});
   }
 
-  function updateBook(form) {
-    console.log("Updating Book placeholder");
-    console.log(modal2);
+  function updateBook(book) {
+    setModalContent2(book);
     handleModal2();
-    setModalContent2(form);
   }
 
   return (
@@ -44,7 +40,7 @@ export default function BooksCarousel({
             <p className="bookDescription">{book.description}</p>
             <p className="bookStatus">{book.status}</p>
             <div className="bookOptions">
-              <button className="updateButton" onClick={updateBook}>
+              <button className="updateButton" onClick={ () =>updateBook(book)}>
                 Update
               </button>
               <button
@@ -59,6 +55,7 @@ export default function BooksCarousel({
                   handleUpdateBook={handleUpdateBook}
                   book={book}
                   closeModal2={closeModal2}
+                  modalContent2={modalContent2}
                 />
               )}
             </div>
