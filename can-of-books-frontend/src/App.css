@@ -9,20 +9,13 @@
   box-sizing: border-box;
   font-size: 10px;
 }
+.app{
+  background-color: rgb(251, 239, 224);
+}
 
 h2 {
   text-align: center;
-  padding: 0.1rem 0;
+  padding-bottom: 1rem ;
 }
 
-.loginButton {
-  font-size: 0.8rem;
-  background-color: #2d4356;
-  color: wheat;
-  margin: 1rem;
-  padding: 3px;
-}
 
-.userProfile {
-  display: flex;
-}
